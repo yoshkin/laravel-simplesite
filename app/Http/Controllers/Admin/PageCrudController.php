@@ -25,6 +25,11 @@ class PageCrudController extends CrudController
         $this->crud->setRoute(config('backpack.base.route_prefix').'/page');
         $this->crud->setEntityNameStrings('page', 'pages');
 
+        $this->crud->allowAccess('revisions');
+        $this->crud->with('revisionHistory');
+
+        $this->crud->enableExportButtons();
+
         /*
         |--------------------------------------------------------------------------
         | COLUMNS

@@ -6,12 +6,16 @@ use Backpack\CRUD\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
+use \Venturecraft\Revisionable\RevisionableTrait;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Page extends Model
 {
     use CrudTrait;
     use Sluggable;
     use SluggableScopeHelpers;
+    use RevisionableTrait;
+    use SoftDeletes;
 
      /*
     |--------------------------------------------------------------------------
@@ -27,6 +31,11 @@ class Page extends Model
     // protected $hidden = [];
     // protected $dates = [];
     protected $fakeColumns = ['extras'];
+
+    protected $revisionEnabled = true;
+    protected $revisionCleanup = true; //Remove old revisions (works only when used with $historyLimit)
+    protected $historyLimit = 500; //Maintain a maximum of 500 changes at any point of time, while cleaning up old revisions.
+
 
     /**
      * Return the sluggable configuration array for this model.

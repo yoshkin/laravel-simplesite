@@ -23,7 +23,7 @@ Laravel is accessible, yet powerful, providing tools needed for large, robust ap
 - "laravel/tinker": "~1.0" (Tinker)
 - "cviebrock/eloquent-sluggable": "^4.2" (Create slugs automaticaly)
 - "venturecraft/revisionable": "^1.28" (Enabled revisions for CRUD controllers)
-- Backpack Page CRUD Model + Controller + PageTemplate + PagesController, based on "backpack/pagemanager": "^1.1" 
+- Backpack Page CRUD Model + Controller + PageTemplate + PagesController, based on "backpack/pagemanager": "^1.1"
 - Menu CRUD Model + Controller
 - News (Articles + Categories + Tags) CRUD Models + Controllers
 
