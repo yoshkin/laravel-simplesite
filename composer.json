@@ -11,7 +11,6 @@
         "backpack/crud": "^3.2",
         "backpack/langfilemanager": "^1.0",
         "backpack/logmanager": "^2.3",
-        "backpack/pagemanager": "^1.1",
         "backpack/permissionmanager": "^2.1",
         "backpack/settings": "^2.0",
         "cviebrock/eloquent-sluggable": "^4.2",

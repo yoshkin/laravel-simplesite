@@ -55,7 +55,7 @@ class MenuItemCrudController extends CrudController
                                 'name' => 'type',
                                 'label' => 'Type',
                                 'type' => 'page_or_link',
-                                'page_model' => '\Backpack\PageManager\app\Models\Page',
+                                'page_model' => '\App\Models\Page',
                             ]);
     }
 

@@ -196,7 +196,7 @@ return [
         Backpack\LogManager\LogManagerServiceProvider::class,
         Backpack\Settings\SettingsServiceProvider::class,
         Cviebrock\EloquentSluggable\ServiceProvider::class,
-        Backpack\PageManager\PageManagerServiceProvider::class,
+//        Backpack\PageManager\PageManagerServiceProvider::class,
         Backpack\PermissionManager\PermissionManagerServiceProvider::class,
 
     ],

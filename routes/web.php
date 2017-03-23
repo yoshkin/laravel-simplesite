@@ -23,6 +23,22 @@ Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' 
     CRUD::resource('category', 'CategoryCrudController');
     CRUD::resource('tag', 'TagCrudController');
 
+       // Backpack\PageManager routes
+//        Route::get('page/create/{template}', 'PageCrudController@create');
+//        Route::get('page/{id}/edit/{template}', 'PageCrudController@edit');
+
+        // This triggered an error before publishing the PageTemplates trait, when calling Route::controller();
+         CRUD::resource('page', 'PageCrudController');
+
+        // So for PageCrudController all routes are explicitly defined:
+//        Route::get('page/reorder', 'PageCrudController@reorder');
+//        Route::get('page/reorder/{lang}', 'PageCrudController@reorder');
+//        Route::post('page/reorder', 'PageCrudController@saveReorder');
+//        Route::post('page/reorder/{lang}', 'PageCrudController@saveReorder');
+//        Route::get('page/{id}/details', 'PageCrudController@showDetailsRow');
+//        Route::get('page/{id}/translate/{lang}', 'PageCrudController@translateItem');
+//        Route::resource('page', 'PageCrudController');
+
     //Dashboard
     Route::get('dashboard', 'DashboardController@index');
 });

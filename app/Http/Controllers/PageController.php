@@ -7,7 +7,7 @@
  */
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use Backpack\PageManager\app\Models\Page;
+use App\Models\Page;
 use App\Models\MenuItem;
 class PageController extends Controller
 {
