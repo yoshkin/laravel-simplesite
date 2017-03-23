@@ -1,40 +1,83 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+# LaravelSimpleSite
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
+[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
+[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
+[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
+[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
 
-## About Laravel
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Pack for production ENV contains
+- "laravel/framework": "5.4.*" (Laravel Framework)
+- "backpack/permissionmanager": "^2.1" (Backpack Permission Manager - [Usage 1](https://github.com/Laravel-Backpack/PermissionManager#using-permissions) and [Usage 2](https://github.com/spatie/laravel-permission#usage))
+- "backpack/base": "^0.7.16" (Backpack Base package)
+- "backpack/crud": "^3.2" (Backpack CRUD package)
+- "backpack/backupmanager": "^1.1" (Backpack Backup package)
+- "backpack/langfilemanager": "^1.0" (Backpack Language Manager)
+- "backpack/logmanager": "^2.3" (Backpack Logs Manager)
+- "backpack/pagemanager": "^1.1" (Backpack Page CRUD Model + Controller + PageTemplate + PagesController)
+- "backpack/permissionmanager": "^2.1" (Backpack permission manager)
+- "backpack/settings": "^2.0" (Backpack Settings CRUD Model + Controller)
+- "laravel/tinker": "~1.0" (Tinker)
+- "cviebrock/eloquent-sluggable": "^4.2" (Create slugs automaticaly)
+- "venturecraft/revisionable": "^1.28" (Enabled revisions for CRUD controllers)
+- Menu CRUD Model + Controller
+- News (Articles + Categories + Tags) CRUD Models + Controllers
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+## Pack for development (local) ENV additionaly contains
+- "backpack/generators": "^1.1" (console backpack crud generator)
+- "laracasts/generators": "dev-master as 1.1.4"  (for more info see "php artisan list")
+- "barryvdh/laravel-debugbar": "^2.3" (Debug bar)
+- "barryvdh/laravel-ide-helper": "^2.3" (Ide Helper for PhpStorm)
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+## Installation
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+- First - clone repo (Run in your terminal - you need git installed) and change dir to your project
+```
+git clone https://github.com/yoshkin/laravel-simplesite.git yourproject.dev
+cd yourproject.dev
+```
 
-## Contributing
+- Second - install packages, create .env, generate KEY and update packages (Run in your "yourproject.dev" folder)
+```
+php -r "file_exists('.env') || copy('.env.example', '.env');"
+composer install
+php artisan key:generate
+composer update
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+- Setup (change it) your ENV sql connection (.env)
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=homestead
+DB_USERNAME=homestead
+DB_PASSWORD=secret
+```
 
-## Security Vulnerabilities
+- Migrate sql queries + DB demo seeds for Settings Model (Run in your "yourproject.dev" folder)
+```
+php artisan migrate
+php artisan db:seed --class="Backpack\Settings\database\seeds\SettingsTableSeeder"
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+- Maybe you need to change folders permissions (Run in your "yourproject.dev" folder)
+```
+sudo chgrp -R www-data storage bootstrap/cache
+sudo chmod -R ug+rwx storage bootstrap/cache
+```
+
+- Activate Laravel Framework plugin in PHPStorm
+```
+Settings -> Laravel -> Enable for this project
+```
 
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Backpack is free for non-commercial use and $19/project for commercial use. Please see [License File](https://github.com/Laravel-Backpack/Base/blob/master/LICENSE.md) and [backpackforlaravel.com](https://backpackforlaravel.com/#pricing) for more information.
