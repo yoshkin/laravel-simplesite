@@ -26,9 +26,21 @@
         <div class="col-md-6">
             <div class="box box-default">
                 <div class="box-header with-border">
-                    <div class="box-title">{{ $someVar }}</div>
+                    <div class="box-title"><a href="{{ url(config('backpack.base.route_prefix', 'admin'))."/settings" }}">Site Settings</a></div>
                 </div>
-                <div class="box-body">{{ $someVar }}</div>
+                <div class="box-body">
+                    <ul>
+                        @foreach(Config::get('settings') as $key => $value)
+                        <li>
+                            @if($key !== 'address')
+                            {{ $key }} - {{ $value }}
+                            @else
+                            Address: {{ json_decode($value)->value }}
+                            @endif
+                        </li>
+                        @endforeach
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="col-md-6">
