@@ -22,7 +22,7 @@
                     {!! $page['content'] !!}
                     <br>
                     {{ Config::get('settings.contact_email') }}<br>
-                    {{ Config::get('settings.motto') }}<br>
+                    {{ json_decode(Config::get('settings.address'))->city }}<br>
 
                 </div>
                 <div class="links">
