@@ -65,6 +65,49 @@ trait PageTemplates
                     ]);
     }
 
+    private function landing_page()
+    {
+        $this->crud->addField([
+            'name' => 'meta_title',
+            'label' => 'Meta Title',
+            'fake' => true,
+            'store_in' => 'extras',
+            'tab' => 'Metas',
+        ]);
+        $this->crud->addField([
+            'name' => 'meta_keywords',
+            'label' => 'Meta Keywords',
+            'fake' => true,
+            'store_in' => 'extras',
+            'tab' => 'Metas',
+        ]);
+        $this->crud->addField([
+            'name' => 'meta_description',
+            'label' => 'Meta Description',
+            'type' => 'textarea',
+            'fake' => true,
+            'store_in' => 'extras',
+            'tab' => 'Metas',
+        ]);
+
+        $this->crud->addField([
+            'name' => 'content',
+            'label' => 'Content',
+            'type' => 'wysiwyg',
+            'placeholder' => 'Your content here',
+            'tab' => 'Content',
+        ]);
+
+        $this->crud->addField([
+            'name' => 'meta_description',
+            'label' => 'Meta Description',
+            'type' => 'textarea',
+            'fake' => true,
+            'store_in' => 'extras',
+            'tab' => 'Metas',
+        ]);
+    }
+
     private function about_us()
     {
         $this->crud->addField([

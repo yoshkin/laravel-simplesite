@@ -12,26 +12,26 @@ Laravel is accessible, yet powerful, providing tools needed for large, robust ap
 
 ## Pack for production ENV contains
 - "laravel/framework": "5.4.*" (Laravel Framework)
-- "backpack/permissionmanager": "^2.1" (Backpack Permission Manager - [Usage 1](https://github.com/Laravel-Backpack/PermissionManager#using-permissions) and [Usage 2](https://github.com/spatie/laravel-permission#usage))
-- "backpack/base": "^0.7.16" (Backpack Base package)
-- "backpack/crud": "^3.2" (Backpack CRUD package)
-- "backpack/backupmanager": "^1.1" (Backpack Backup package)
-- "backpack/langfilemanager": "^1.0" (Backpack Language Manager)
-- "backpack/logmanager": "^2.3" (Backpack Logs Manager)
-- "backpack/permissionmanager": "^2.1" (Backpack permission manager)
-- "backpack/settings": "^2.0" (Backpack Settings CRUD Model + Controller)
-- "laravel/tinker": "~1.0" (Tinker)
-- "cviebrock/eloquent-sluggable": "^4.2" (Create slugs automaticaly)
-- "venturecraft/revisionable": "^1.28" (Enabled revisions for CRUD controllers)
+- "backpack/permissionmanager" (Backpack Permission Manager - [Usage 1](https://github.com/Laravel-Backpack/PermissionManager#using-permissions) and [Usage 2](https://github.com/spatie/laravel-permission#usage))
+- "backpack/base" (Backpack Base package)
+- "backpack/crud" (Backpack CRUD package)
+- "backpack/backupmanager" (Backpack Backup package)
+- "backpack/langfilemanager" (Backpack Language Manager)
+- "backpack/logmanager" (Backpack Logs Manager)
+- "backpack/permissionmanager" (Backpack permission manager)
+- "laravel/tinker" (Tinker)
+- "cviebrock/eloquent-sluggable" (Create slugs automaticaly)
+- "venturecraft/revisionable" (Enabled revisions for CRUD controllers)
 - Backpack Page CRUD Model + Controller + PageTemplate + PagesController, based on "backpack/pagemanager": "^1.1"
 - Menu CRUD Model + Controller
 - News (Articles + Categories + Tags) CRUD Models + Controllers
+- Settings CRUD Model + Controller :: as App\Model (based on backpack/settings)
 
 ## Pack for development (local) ENV additionaly contains
-- "backpack/generators": "^1.1" (console backpack crud generator)
+- "backpack/generators" (console backpack crud generator)
 - "laracasts/generators": "dev-master as 1.1.4"  (for more info see "php artisan list")
-- "barryvdh/laravel-debugbar": "^2.3" (Debug bar)
-- "barryvdh/laravel-ide-helper": "^2.3" (Ide Helper for PhpStorm)
+- "barryvdh/laravel-debugbar" (Debug bar)
+- "barryvdh/laravel-ide-helper" (Ide Helper for PhpStorm)
 
 
 ## Installation
@@ -63,7 +63,7 @@ DB_PASSWORD=secret
 - Migrate sql queries + DB demo seeds for Settings Model (Run in your "yourproject.dev" folder)
 ```
 php artisan migrate
-php artisan db:seed --class="Backpack\Settings\database\seeds\SettingsTableSeeder"
+php artisan db:seed --class="SettingsTableSeeder"
 ```
 
 - Maybe you need to change folders permissions (Run in your "yourproject.dev" folder)

@@ -194,7 +194,7 @@ return [
         Spatie\Backup\BackupServiceProvider::class,
         Backpack\BackupManager\BackupManagerServiceProvider::class,
         Backpack\LogManager\LogManagerServiceProvider::class,
-        Backpack\Settings\SettingsServiceProvider::class,
+//        Backpack\Settings\SettingsServiceProvider::class,
         Cviebrock\EloquentSluggable\ServiceProvider::class,
 //        Backpack\PageManager\PageManagerServiceProvider::class,
         Backpack\PermissionManager\PermissionManagerServiceProvider::class,

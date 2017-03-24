@@ -12,7 +12,6 @@
         "backpack/langfilemanager": "^1.0",
         "backpack/logmanager": "^2.3",
         "backpack/permissionmanager": "^2.1",
-        "backpack/settings": "^2.0",
         "cviebrock/eloquent-sluggable": "^4.2",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",

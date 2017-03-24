@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b78d545861e0440665846ad03e166cc7",
-    "content-hash": "46cca446a60bf41c684c59ab83aeb42f",
+    "hash": "54e1b9fab103edd81c54902bbb03ff3c",
+    "content-hash": "a84a7acc31fe65f33ec02d7134c8f57f",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -430,65 +430,6 @@
             "time": "2017-02-17 07:23:19"
         },
         {
-            "name": "backpack/settings",
-            "version": "2.0.15",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Laravel-Backpack/Settings.git",
-                "reference": "491c255d3ae563f96beb74976603e35cd01102a0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Backpack/Settings/zipball/491c255d3ae563f96beb74976603e35cd01102a0",
-                "reference": "491c255d3ae563f96beb74976603e35cd01102a0",
-                "shasum": ""
-            },
-            "require": {
-                "backpack/crud": "3.2.*"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.*",
-                "scrutinizer/ocular": "~1.1"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Backpack\\Settings\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Cristian Tabacitu",
-                    "email": "hello@tabacitu.ro",
-                    "homepage": "http://www.tabacitu.ro",
-                    "role": "Chief Architect & Lead Developer"
-                }
-            ],
-            "description": "Application settings interface for Laravel 5 using Backpack CRUD.",
-            "homepage": "https://github.com/laravel-backpack/settings",
-            "keywords": [
-                "backpack",
-                "backpack settings",
-                "dick",
-                "dick settings",
-                "laravel backpack",
-                "manage settings",
-                "settings admin",
-                "tabacitu",
-                "updivision"
-            ],
-            "time": "2017-02-14 07:46:09"
-        },
-        {
             "name": "barryvdh/elfinder-flysystem-driver",
             "version": "v0.2.0",
             "source": {
@@ -598,16 +539,16 @@
         },
         {
             "name": "cocur/slugify",
-            "version": "v2.4",
+            "version": "v2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cocur/slugify.git",
-                "reference": "f11f22d4e60c408187c3efd8ac201c022a93cc3f"
+                "reference": "e8167e9a3236044afebd6e8ab13ebeb3ec9ca145"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cocur/slugify/zipball/f11f22d4e60c408187c3efd8ac201c022a93cc3f",
-                "reference": "f11f22d4e60c408187c3efd8ac201c022a93cc3f",
+                "url": "https://api.github.com/repos/cocur/slugify/zipball/e8167e9a3236044afebd6e8ab13ebeb3ec9ca145",
+                "reference": "e8167e9a3236044afebd6e8ab13ebeb3ec9ca145",
                 "shasum": ""
             },
             "require": {
@@ -627,7 +568,7 @@
                 "symfony/config": "~2.4|~3.0",
                 "symfony/dependency-injection": "~2.4|~3.0",
                 "symfony/http-kernel": "~2.4|~3.0",
-                "twig/twig": "~1.12",
+                "twig/twig": "~1.26|~2.0",
                 "zendframework/zend-modulemanager": "~2.2",
                 "zendframework/zend-servicemanager": "~2.2",
                 "zendframework/zend-view": "~2.2"
@@ -658,20 +599,20 @@
                 "slug",
                 "slugify"
             ],
-            "time": "2017-02-09 19:27:52"
+            "time": "2017-03-23 21:52:55"
         },
         {
             "name": "cviebrock/eloquent-sluggable",
-            "version": "4.2.1",
+            "version": "4.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cviebrock/eloquent-sluggable.git",
-                "reference": "c576e7b5e2ed038172c7aead618456a45cd73d0b"
+                "reference": "08a8c7f02120b481e5856b518f0351c95259e305"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cviebrock/eloquent-sluggable/zipball/c576e7b5e2ed038172c7aead618456a45cd73d0b",
-                "reference": "c576e7b5e2ed038172c7aead618456a45cd73d0b",
+                "url": "https://api.github.com/repos/cviebrock/eloquent-sluggable/zipball/08a8c7f02120b481e5856b518f0351c95259e305",
+                "reference": "08a8c7f02120b481e5856b518f0351c95259e305",
                 "shasum": ""
             },
             "require": {
@@ -710,7 +651,7 @@
                 "laravel",
                 "slug"
             ],
-            "time": "2017-02-01 21:56:08"
+            "time": "2017-03-23 19:14:22"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",

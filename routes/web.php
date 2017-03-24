@@ -41,6 +41,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['web', 'auth'], 'namespace' 
 
     //Dashboard
     Route::get('dashboard', 'DashboardController@index');
+    // Settings
+    Route::resource('setting', 'SettingCrudController');
 });
 
 
