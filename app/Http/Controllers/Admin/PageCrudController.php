@@ -30,6 +30,9 @@ class PageCrudController extends CrudController
 
         $this->crud->enableExportButtons();
 
+        $this->crud->enableDetailsRow();
+        $this->crud->allowAccess('details_row');
+
         /*
         |--------------------------------------------------------------------------
         | COLUMNS
@@ -65,6 +68,15 @@ class PageCrudController extends CrudController
     // -----------------------------------------------
     // Overwrites of CrudController
     // -----------------------------------------------
+
+//    public function showDetailsRow($id)
+//    {
+//        $this->crud->hasAccessOrFail('details_row');
+//        $this->data['entry'] = $this->crud->getEntry($id);
+//        $this->data['crud'] = $this->crud;
+//        // load the view from /resources/views/vendor/backpack/crud/ if it exists, otherwise load the one in the package
+//        return view($this->crud->getDetailsRowView(), $this->data);
+//    }
 
     // Overwrites the CrudController create() method to add template usage.
     public function create($template = false)
