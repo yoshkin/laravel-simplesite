@@ -13,6 +13,7 @@
                         <li>Title: {{ $page['title'] }}</li>
                         {{--<li>Description: {{ $page->meta_description }}</li>--}}
                         <li>Body: {{ $page['content'] }}</li>
+                        <li>Meta Description: {{ $page['meta_description'] }}</li>
                         {{--<li>Menu Name: {{ $pageMenuName->menu->name }}</li>--}}
                     </ul>
                 </div>

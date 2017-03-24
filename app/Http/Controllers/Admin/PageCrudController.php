@@ -142,6 +142,7 @@ class PageCrudController extends CrudController
                                 'wrapperAttributes' => [
                                     'class' => 'form-group col-md-6',
                                 ],
+                                'tab' => 'Main',
                             ]);
         $this->crud->addField([
                                 'name' => 'name',
@@ -150,18 +151,21 @@ class PageCrudController extends CrudController
                                 'wrapperAttributes' => [
                                     'class' => 'form-group col-md-6',
                                 ],
+                                'tab' => 'Main',
                                 // 'disabled' => 'disabled'
                             ]);
         $this->crud->addField([
                                 'name' => 'title',
                                 'label' => 'Page Title',
                                 'type' => 'text',
+                                'tab' => 'Main',
                                 // 'disabled' => 'disabled'
                             ]);
         $this->crud->addField([
                                 'name' => 'slug',
                                 'label' => 'Page Slug (URL)',
                                 'type' => 'text',
+                                'tab' => 'Main',
                                 'hint' => 'Will be automatically generated from your title, if left empty.',
                                 // 'disabled' => 'disabled'
                             ]);
