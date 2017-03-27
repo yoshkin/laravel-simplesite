@@ -52,7 +52,7 @@ class SettingsTableSeeder extends Seeder
             'name'          => 'Full Address',
             'description'   => 'Full Address of location (Citi, Street etc)',
             'value'         => '',
-            'field'         => '{"name":"value","label":"Value", "title":"Address value" ,"type":"address", "store_as_json":"true"}',
+            'field'         => '{"name":"value","label":"Value", "title":"Address value" ,"type":"table", "entity_singular":"option", "columns":{"name":"Name","description":"Description"}}',
             'active'        => 1,
         ]);
         DB::table('settings')->insert([

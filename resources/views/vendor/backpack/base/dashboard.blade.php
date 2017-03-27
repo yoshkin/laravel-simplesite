@@ -35,7 +35,10 @@
                             @if($key !== 'address')
                             {{ $key }} - {{ $value }}
                             @else
-                            Address: {{ json_decode($value)->value }}
+                                Address:
+                                @foreach(json_decode($value) as $k => $v)
+                                    {{ $v->name }}: {{ $v->description }}, 
+                                @endforeach
                             @endif
                         </li>
                         @endforeach

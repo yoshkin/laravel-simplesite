@@ -60,6 +60,7 @@ if (isset($field['value']) && (is_array($field['value']) || is_object($field['va
     {{-- FIELD JS - will be loaded in the after_scripts section --}}
     @push('crud_fields_scripts')
     <script src="https://cdn.jsdelivr.net/places.js/1/places.min.js"></script>
+    {{--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSl1Mfke-3YJxaPv_rcg4A64laWncCn7s&libraries=places"></script>--}}
     <script>
         jQuery(document).ready(function($){
             window.AlgoliaPlaces = window.AlgoliaPlaces || {};
@@ -98,6 +99,11 @@ if (isset($field['value']) && (is_array($field['value']) || is_object($field['va
                 }
 
                 window.AlgoliaPlaces[ $addressConfig.field ] = $place;
+//                function init() {
+//                    var autocomplete = new google.maps.places.Autocomplete($place);
+//                }
+//
+//                google.maps.event.addDomListener(window, 'load', init);
             });
         });
     </script>
