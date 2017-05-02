@@ -98,6 +98,18 @@ trait PageTemplates
             'tab' => 'Content',
         ]);
 
+        $this->crud->addField([ // image
+            'label' => "Page Image",
+            'name' => "image",
+            'type' => 'upload',
+            'upload' => true,
+//            'crop' => true, // set to true to allow cropping, false to disable
+//            'aspect_ratio' => 1, // ommit or set to 0 to allow any aspect ratio
+            'tab' => 'Content',
+            'disk' => 'uploads',
+//             'prefix' => 'uploads/pages/' // in case you only store the filename in the database, this text will be prepended to the database value
+        ]);
+
         $this->crud->addField([
             'name' => 'meta_description',
             'label' => 'Meta Description',
