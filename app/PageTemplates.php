@@ -101,9 +101,9 @@ trait PageTemplates
         $this->crud->addField([ // image
             'label' => "Page Image",
             'name' => "image",
-            'type' => 'upload',
+            'type' => 'image',
             'upload' => true,
-//            'crop' => true, // set to true to allow cropping, false to disable
+            'crop' => true, // set to true to allow cropping, false to disable
 //            'aspect_ratio' => 1, // ommit or set to 0 to allow any aspect ratio
             'tab' => 'Content',
             'disk' => 'uploads',
